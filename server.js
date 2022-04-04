@@ -55,7 +55,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.engine('hbs', hbs.engine({
   extname: 'hbs', 
-  defaultLayout: false,
+  defaultLayout: false, 
   handlebars: allowInsecurePrototypeAccess(Handlebars),
   layoutsDir: __dirname + '/views/layouts/',
   // partialsDir: __dirname + '/views/partials'
@@ -98,7 +98,7 @@ app.post(
   "/login",
   checkNotAuthenticated,
   passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/employee",
     failureRedirect: "/login",
     failureFlash: true,
   })
