@@ -17,7 +17,7 @@ const bodyparser = require('body-parser');
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 const app = express();
 
-const PORT = process.env.PORT|3400
+const PORT = process.env.PORT || 5000;
 
 const employeeController = require('./controllers/employeeController');
 app.use(bodyparser.urlencoded({
@@ -69,6 +69,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
   })
+
 );
 app.use(passport.initialize());
 app.use(passport.session());
