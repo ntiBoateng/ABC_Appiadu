@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Ascension Baptist Church</title>
+    <!-- CSS only -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <div class="titles">
+        <h2>ASCENSION BAPTIST CHURCH, APPIADU BRANCH</h2>
+    <h2>MEMBERSHIP REGISTRATION FORM</h2>
+    </div>
+    
+      {{!-- <marquee behavior="" direction="" class="marq"> <span style="color: burlywood;">Ephesians 1:3-6</span>  Blessed be the God and Father of our Lord Jesus Christ, who has blessed us with every spiritual blessing in the heavenly places in Christ,
+     just as He chose us in Him before the foundation of the world, that we should be holy and without blame before Him in love, having predestined us to adoption as sons by Jesus Christ to Himself, according to the good pleasure of His will, 
+    to the praise of the glory of His grace, by which He made us accepted in the Beloved.  <span style="color: burlywood;">Ephesians 1:3-6</span></marquee> --}}
+<hr style="color: antiquewhite; background-color:aliceblue">
+  <div class="container">
+      <div class="row">
+        <div class="col-4">
+            {{!-- <a href="/" type="button" class="btn btn-success">Home</a> --}}
+        </div>
+        <div class="col-4">
+            {{!-- <a href="/" type="button" class="btn btn-success">Home</a> --}}
+        </div>
+        <div class="col-4 text-right">
+            <a href="/" type="button" class="btn btn-info">Home</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-10 offset-md-1" style="background-color: #ddd3d3;margin-top: 25px;padding:20px;">
+
+<h3 style="color: black;">{{viewTitle}}</h3>
+<br>
+
+<form action="/employee" method="POST" autocomplete="off" aria-autocomplete="none" style="color: black;">
+
+    <input type="hidden" name="_id" value="{{employee._id}}">
+
+
+        
+    <div class="form-row border">
+        <div class="form-group col-md-4">
+        <label>First Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="First Name" value="{{employee.fullName}}">
+        <div class="text-danger">
+            {{employee.fullNameError}}</div>
+        </div>
+        <div class="form-group col-md-4">
+        <label>Surname</label>
+        <input type="text" class="form-control" name="surname" placeholder="Surname" value="{{employee.surname}}">
+        <div class="text-danger">
+            {{employee.fullNameError}}</div>
+    </div>
+    <div class="form-group col-md-4">
+        <label>Popular Name</label>
+        <input type="text" class="form-control" name="popularName" placeholder="Other Name" value="{{employee.popularName}}">
+       
+    </div>
+ </div>
+
+<br>
+
+    <div class="form-row border">
+        <div class="form-group col-md-4">
+        <label for="dob">DOB</label>
+        <input type="date" name="dob" id="dob" class="form-control" value="{{employee.dob}}">
+       </div>
+   
+    
+       <div class="form-group col-md-6">
+        <label><i class="fa fa-user-circle-o" aria-hidden="true"></i> Gender</label><br>
+            <label for="genderM"> Male</label>
+            <input type="radio"  name="gender" id="genderM" value="Male"> &nbsp;
+            <label for="genderF">Female</label>
+            <input type="radio"  name="gender" id="genderF" value="Female">
+        </div>
+    </div>
+<br>
+
+
+    <div class="form-row border">
+        <div class="form-group col-md-5">
+            <label for="hometown"><i class="fa fa-bed" aria-hidden="true"></i> Home Town</label>
+            <input type="text" class="form-control" id="hometown" placeholder="home town" value="{{employee.homeTown}}" name="homeTown">
+        </div>
+        <div class="form-group col-md-5"> 
+            <label for="region">Region</label><br>
+             <select name="region" aria-placeholder="select" id="region" class="form-control">
+                 <option aria-placeholder="Select Region" value="">... select region</option>
+                 <option value="Ahafo">Ahafo</option>
+                 <option value="Ashanti">Ashanti</option>
+                 <option value="Central">Central</option>
+                 <option value="Northen">Northen</option>
+                 <option value="Greater Accra">Greater Accra</option>
+                 <option value="Western North">Western North</option>
+                 <option value="Upper East">Upper East</option>
+                 <option value="Upper West">Upper West</option>
+                 <option value="Western">Western</option>
+                 <option value="Volta">Volta</option>
+                 <option value="North East">North East</option>
+                 <option value="Savannah">Savannah</option>
+                 <option value="Oti">Oti</option>
+                 <option value="Eastern">Eastern</option>
+                 <option value="Brong Ahafo">Brong Ahafo</option>
+                 <option value="Bono East">Bono East</option>
+             </select>
+        </div>
+    </div>
+<br>
+
+
+    <div class="form-row border">
+        <div class="form-group col-md-4">
+            <label for="residence">Residence</label>
+            <input type="text" class="form-control" id="residence" name="residence" value="{{employee.residence}}" placeholder="current place of residence">
+        </div>
+        <div class="form-group col-md-4">
+             <label for="hseNum"><i class="fa fa-home" aria-hidden="true"></i> House Number</label>
+            <input type="text" class="form-control" id="hseNum" name="houseNumber" value="{{employee.houseNumber}}" placeholder="house No.">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="occupation">Occupation</label>
+            <input type="text" class="form-control" id="occupation" name="occupation" value="{{employee.occupation}}" placeholder="occupation">
+        </div>
+    </div>
+
+<br>
+
+    <div class="form-row">
+        <div class="form-group col-md-4">
+<label for="schoolClass"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sunday School Class</label>
+            <input type="text" class="form-control" name="schoolClass" id="schoolClass" value="{{employee.schoolClass}}">
+        </div>
+        
+    </div>
+<br>
+
+    <div class="form-row border">
+        
+        <div class="form-group col-md-3">
+<label for="num"><i class="fa fa-phone" aria-hidden="true"></i> Mobile Number</label>
+            <input type="text" class="form-control" name="mobNum" id="num" value="{{employee.mobNum}}">
+        </div>
+        <div class="form-group col-md-5">
+ <label><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Email" value="{{employee.email}}">
+        <div class="text-danger">
+            {{employee.emailError}}</div>
+        </div>
+
+    </div>
+<br>
+<hr style="font-weight: bolder;">
+    <br>
+
+    <div class="form-row border">
+        <div class="form-group col-md-7">
+            <label >Tithe Card ?</label><br>
+            <label for="Tc">Yes</label>
+            <input type="radio" name="tithe" id="Tc" value="Yes"> &nbsp;&nbsp;
+            <label for="Tr">No</label>
+            <input type="radio" name="tithe" id="Tr" value="No">
+        </div>
+        <div class="form-group col-md-4">
+        <label for="cardNumber">Tithe Card No.</label><br>
+       <input type="text" class="form-control" id="cardNumber" name="titheNum" value="{{employee.titheNum}}">
+       </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    </div>
+    <br>
+    <div class="form-row border">
+        <div class="form-group col-md-6">
+     <label for="dayBorn">Day Born</label><br>
+    <select name="dayBorn" id="dayBorn" class="form-control" >
+    <option value="">...select one</option>
+    <option value="Sunday">Sunday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+    <option value="Saturday">Saturday</option>
+    <option value="Monday">Monday</option>
+    </select>
+</div>
+    </div>
+    <br>
+<hr>
+<br>
+
+<div class="form-row border">
+    <div class="form-group col-md-4">
+         <label>Is Spouse a Member ?</label><br>
+        <label for="yes">Yes</label>
+        <input type="radio" name="spouseMember" id="yes" value="Yes">
+        <label for="yes">No</label>
+        <input type="radio" name="spouseMember" id="no" value="No"><br>
+        <label for="notAppli">Not Applicable</label>
+        <input type="radio" name="spouseMember" id="notAppli" value="NA">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="spouseId">Spouse ID if <i>Yes</i></label><br>
+        <input type="text" class="form-control" id="spouseId" name="spouseID" value="{{employee.spouseID}}">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="spouseName">Spouse Name if <i>Yes</i></label><br>
+        <input type="text" class="form-control" name="spouseName" id="spouseName" value="{{spouseName}}">
+    </div>
+</div>
+<br>
+    <div class="form-row border">
+        <div class="form-group col-md-5">
+            <label for="spouseOccu">Spouse Occupation</label><br>
+            <input type="text" name="spouseOccupation" id="spouseOccu" value="{{spouseOccupation}}" class="form-control">
+        </div>
+        <div class="form-group col-md-5">
+            <label for="spouseCont">Spouse Contact</label><br>
+            <input type="text" name="spouseCont" id="spouseCont" value="{{spouseCont}}" class="form-control  form-group col-md-35">
+        </div>
+    </div>
+<br>
+    <hr>
+    <br>
+    <div class="form-row border">
+        <div class="form-group col-md-4">
+            <label for="baptised">Baptised ?</label><br>
+            <label for="yes">Yes</label>&nbsp;
+            <input type="radio" name="T" id="yes">
+            <label for="no">No</label>
+            <input type="radio" name="T" id="no">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="by">By (Rev)</label><br>
+            <input type="text" class="form-control" id="by" name="baptBy" value="{{employee.baptBy}}">
+        </div>
+         <div class="form-group col-md-4">
+            <label for="church">Church</label><br>
+            <input type="text" class="form-control" name="church" id="church" value="{{employee.church}}">
+        </div>
+    </div>
+<br>
+    <div class="form-row border">
+         <div class="form-group col-md-4">
+            <label for="location">Location</label><br>
+            <input type="text" name="location" class="form-control" id="location" value="{{employee.location}}">
+        </div>
+         <div class="form-group col-md-4">
+            <label for="certNo">Baptist Cert. No.</label><br>
+            <input type="text" name="certNo" class="form-control" id="certNo" value="{{employee.certNo}}">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="dateBapt">Date Baptised</label><br>
+            <input type="date" name="dateBapt" class="form-control" id="dateBapt" value="{{employee.dateBapt}}">
+        </div>
+    </div>
+    <br><br>
+    <br><br>
+    <div class="form-row border">
+        
+    <div class="form-group col-md-5">
+        <label for="memberYear">Membership Year</label><br>
+        <input type="text" name="memberYear" class="form-control col-md-10" id="memberYear" value="{{employee.memberYear}}">
+    </div>
+    <div class="form-group col-md-5">
+        <button type="submit" class="btn btn-info form-group col-md-5"><i class="fa fa-database"></i> Submit</button>
+    </div>
+    </div>
+    {{!-- <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Mobile</label>
+            <input type="text" class="form-control" name="mobile" placeholder="Mobile" value="{{employee.mobile}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>City</label>
+            <input type="text" class="form-control" name="city" placeholder="City" value="{{employee.city}}">
+        </div>
+    </div> --}}
+    <br><br>
+<div class="form-row border" style="border-color: black;">
+    
+    <div class="form-group" style="border-color: blueviolet;">
+         &nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt "></i> View All</a>
+    </div>
+</div>
+
+</form>
+
+
+        </div>
+    </div>  
+
+</body>
+<footer class="sticky-footer">
+    <hr style="color: antiquewhite; background-color:aliceblue">
+    <marquee behavior="" direction="" class="marq"> <span style="color: burlywood;">Ephesians 1:3-6</span>  Blessed be the God and Father of our Lord Jesus Christ, who has blessed us with every spiritual blessing in the heavenly places in Christ,
+     just as He chose us in Him before the foundation of the world, that we should be holy and without blame before Him in love, having predestined us to adoption as sons by Jesus Christ to Himself, according to the good pleasure of His will, 
+    to the praise of the glory of His grace, by which He made us accepted in the Beloved.  <span style="color: burlywood;">Ephesians 1:3-6</span></marquee>
+<hr style="color: antiquewhite; background-color:aliceblue">
+</footer>
+
+</html>

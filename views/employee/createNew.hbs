@@ -1,0 +1,210 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Membership Registration Form</title>
+    
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h2>ASCENSION BAPTIST CHURCH, APPIADU BRANCH</h2>
+    <h2>MEMBERSHIP REGISTRATION FORM</h2>
+    <hr>
+    <form action="" method="post">
+        <fieldset>
+            <legend>* Fields are required</legend>
+            <label for="idNum">ID Number</label>
+            <input type="text" id="idNum" required>
+            <br> <br>
+            <label for="surName">Surname</label>
+            <input type="text" id="surName" required>
+            &nbsp;
+            <label for="otherName">Other Name(s)</label>
+            <input type="text" id="otherName" required>
+
+            <br><br>
+            <label for="dateOfBirth">DOB(DD/MM/YYYY)</label>
+            <input type="date" name="date" id="dateOfBirth" required>
+            <br><br>
+            <label for="age">Current Age</label>
+            <input type="text" name="age"> &nbsp; &nbsp;
+            <br><br>
+            <label for="genderM">Male</label> &nbsp;&nbsp;
+            <input type="radio" name="F" id="genderM"><br>
+            <label for="genderF">Female</label>
+            <input type="radio" name="F" id="genderF">
+            <br><br>
+            <label for="hometown">Home Town</label>
+            <input type="text" id="hometown" required>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="region">Region</label>
+            <input type="text" id="region" required>     
+            
+            <br><br>
+            <label for="residence">Residence</label>
+            <input type="text" id="residence" required>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="hseNum">House Number</label>
+            <input type="text" id="hseNum" required>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="occupation">Occupation</label>
+            <input type="text" id="occupation" required>
+            <br><br><br>
+            <label for="schoolClass">Sunday School Class</label>
+            <input type="text" name="schoolClass" id="schoolClass" required>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="num">Mobile Number</label>
+            <input type="text" name="mobNum" id="num">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <br><br><br>
+            <fieldset id="parentField">
+                <table>
+                    <tr>
+                        <td>
+                            
+            <fieldset id="field2">
+                <p>Tithe Card?</p>
+            <label for="yes">Yes</label>
+            <input type="radio" name="T" id="yes"><br>
+            <label for="yes">No</label>
+            <input type="radio" name="T" id="no">
+            </fieldset>
+                        </td>
+                        <td>
+                            <fieldset id="field3">
+                                &nbsp;&nbsp;<label for="cardNumber">Tithe Card Number</label><br><br>
+                                <input type="text" id="cardNumber">
+                
+                            </fieldset>
+                
+                        </td>
+                       
+                        <td>
+                            <fieldset>
+                                <label for="dayBorn">Day Born</label><br><br>
+                            <select name="dayBorn" id="dayBorn">
+                                <option value="monday">Monday</option>
+                                <option value="tuesday">Tuesday</option>
+                                <option value="wednesday">Wednesday</option>
+                                <option value="thursday">Thursday</option>
+                                <option value="friday">Friday</option>
+                                <option value="saturday">Saturday</option>
+                                <option value="sunday">Sunday</option>
+                            </select>
+                            </fieldset>
+                        </td>
+                       
+                    </tr>
+                </table>
+            </fieldset>
+            <br><br><br>
+
+            <fieldset>
+                <table>
+                    <tr>
+                        
+                            <td>
+                              <fieldset>
+                                <p>Is Spouse a member?</p>
+                                <label for="yes">Yes</label>
+                                <input type="radio" name="T" id="yes"><br>
+                                <label for="yes">No</label>
+                                <input type="radio" name="T" id="no">
+                              </fieldset>
+                            </td>
+                        
+                        
+                            <td>
+                                <fieldset>
+                                    <label for="spouseID">Spouse ID if Yes</label><br><br>
+                                <input type="text" id="spouseID">
+                                </fieldset>
+                            </td>
+                        
+                        <td>
+                            <fieldset>
+                                <label for="spouseName">Spouse Name</label><br><br>
+                            <input type="text" id="spouseName">
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
+                <label for="spouseOccupation">Spouse Occupation</label>
+            <input type="text" id="spouseOccupation">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="spouseContact">Spouse Contact</label>
+            <input type="text" id="spouseContact">
+            </fieldset>
+
+            <br><br>
+            
+
+           <fieldset>
+               <table>
+                   <tr>
+                       <td>
+                           <fieldset>
+                               <p>Baptised?</p>
+                               <label for="yes">Yes</label>
+                               <input type="radio" name="T" id="yes"><br>
+                               <label for="no">No</label>
+                               <input type="radio" name="T" id="no">
+                           </fieldset>
+                       </td>
+                       <td>
+                           <fieldset>
+                               <label for="by">By</label><br><br>
+                               <input type="text" id="by">
+                           </fieldset>
+                       </td>
+                       <td>
+                           <fieldset>
+                               <label for="church">Church</label><br><br>
+                               <input type="text" id="church">
+
+                           </fieldset>
+                       </td>
+                       <td>
+                           <fieldset>
+                               <label for="location">Location</label><br><br>
+                               <input type="text" id="location">
+
+                           </fieldset>
+                       </td>
+                       <td>
+                           <fieldset>
+                               <label for="certNo">Baptist Cert. No.</label><br><br>
+                               <input type="text" id="certNo">
+                           </fieldset>
+                       </td>
+                       <td>
+                           <fieldset>
+                               <label for="dateBapt">Date Baptised</label><br><br>
+                               <input type="date" name="date" id="dateBapt">
+                           </fieldset>
+                       </td>
+                   </tr>
+               </table>
+               
+
+           </fieldset>
+
+
+           <br><br><br>
+           <label for="memberYear">Membership Year</label><br><br>
+           <input type="year" id="memberYear">
+
+
+
+        </fieldset>
+
+
+
+
+    </form>
+
+</body>
+</html>
