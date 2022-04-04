@@ -17,6 +17,8 @@ const bodyparser = require('body-parser');
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 const app = express();
 
+const PORT = process.env.PORT|3400
+
 const employeeController = require('./controllers/employeeController');
 app.use(bodyparser.urlencoded({
   extended: true
@@ -25,10 +27,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyparser.json());
 
 
+
 const {
   checkAuthenticated,
   checkNotAuthenticated,
 } = require("./middlewares/auth");
+
+
 
 
 
@@ -49,16 +54,12 @@ initializePassport(
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.engine('hbs', hbs.engine({
-  extname: 'hbs',
+  extname: 'hbs', 
   defaultLayout: false,
   handlebars: allowInsecurePrototypeAccess(Handlebars),
   layoutsDir: __dirname + '/views/layouts/',
   // partialsDir: __dirname + '/views/partials'
 }))
-
-
-//ejs template engine
-//app.set("view engine", "ejs");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(flash());
@@ -79,7 +80,6 @@ app.use('/employee',checkAuthenticated, employeeController);
 app.get("/", (req, res) => {
   res.render("index");  
 });
-
 
 app.get("/contact",(req,res)=>{
   res.render("contact")
@@ -110,9 +110,10 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
     req.flash("error", "User with that email already exists");
     res.redirect("/register");
   } else {
-    try {
-      const hashedPassword = await bcrypt.hash(req.body.password, 10);
-      const user = new User({
+
+      try {
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+          const user = new User({
         name: req.body.name,
         email: req.body.email,
         password: hashedPassword,
@@ -138,7 +139,7 @@ mongoose
     useNewUrlParser: true,
   })
   .then(() => {
-    app.listen(3000, () => {
-      console.log("Server is running on Port 3000");
+    app.listen(PORT, () => {
+      console.log("Server is running on Port 3400");
     });
   });
