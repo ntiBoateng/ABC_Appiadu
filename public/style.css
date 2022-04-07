@@ -7,9 +7,10 @@
 }
 
 body {
-  background-color: #6a5acd;
+  background-color: #032139;
   display: grid;
   place-items: center;
+  color: antiquewhite;
   width: 100vw;
   height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;

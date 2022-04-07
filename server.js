@@ -86,7 +86,7 @@ app.get("/contact",(req,res)=>{
   res.render("contact")
 })
 
-app.get("/register", checkNotAuthenticated, (req, res) => {
+app.get("/ogidi", checkNotAuthenticated, (req, res) => {
   res.render("register");
 });
 
@@ -104,7 +104,7 @@ app.post(
   })
 );
 
-app.post("/register", checkNotAuthenticated, async (req, res) => {
+app.post("/ogidi", checkNotAuthenticated, async (req, res) => {
   const userFound = await User.findOne({ email: req.body.email });
 
   if (userFound) {
@@ -134,6 +134,14 @@ app.delete("/logout", (req, res) => {
   res.redirect("/login");
 });
 
+
+//keep this at the bottom of all routes
+app.get("*",(req,res)=>{
+  res.status(404).render("notfound")
+})
+
+
+
 mongoose
   .connect("mongodb+srv://bgnti:Aladdin200@cluster0.vrp2h.mongodb.net/EmployeeDB", {
     useUnifiedTopology: true,
@@ -141,6 +149,6 @@ mongoose
   })
   .then(() => {
     app.listen(PORT, () => {
-      console.log("Server is running on Port 3400");
+      console.log(`Server start on http://localhost:${PORT}`);
     });
   });
