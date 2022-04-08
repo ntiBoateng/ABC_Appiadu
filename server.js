@@ -81,7 +81,15 @@ app.use('/employee',checkAuthenticated, employeeController);
 app.get("/", (req, res) => {
   res.render("index");  
 });
-
+app.get("/history",(req,res)=>{
+  res.render("history")
+})
+app.get("/teens",(req,res)=>{
+  res.render("employee/teens")
+})
+app.get("/teens/list",(req,res)=>{
+  res.render("employee/teenslist")
+})
 app.get("/contact",(req,res)=>{
   res.render("contact")
 })
@@ -133,6 +141,8 @@ app.delete("/logout", (req, res) => {
   req.logOut();
   res.redirect("/login");
 });
+
+
 
 
 //keep this at the bottom of all routes

@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ascension Baptist Church</title>
-    <!-- CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -23,10 +22,8 @@
     <!-- Style -->
     <link rel="stylesheet" href="../../website-menu-03/css/style.css">
 </head>
-
 <body>
-
-    <div class="site-mobile-menu">
+        <div class="site-mobile-menu">
         <div class="site-mobile-menu-header">
             <div class="site-mobile-menu-close mt-3">
                 <span class="icon-close2 js-menu-toggle"></span>
@@ -63,11 +60,12 @@
                             <li class="dropdown-item"><a href="/teens">Teens and Children</a></li>
                         </ul>
                         </li>
+
                         <li class="has-children">
                             <a href="#"><span>Membership List</span></a>
                             <ul class="dropdown arrow-top role=" button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <li class=" dropdown-item"><a href="/employee/list">Adult</a>
+                                <li class=" dropdown-item active"><a href="/employee/list">Adult</a>
                                 </li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -77,11 +75,10 @@
                         </li>
 
                         <li><a href="/contact"><span>Contact</span></a></li>
-                        <li class="active"><a href="/history"><span>Church History</span></a></li>
+                        <li><a href="/history"><span>Church History</span></a></li>
                         </ul>
                     </nav>
                 </div>
-                <br><br>
                 {{!-- <div class="container">
                     <div class="row">
                         <div class="col">welcome {{name}}</div>
@@ -100,31 +97,22 @@
 
         </div>
     </header>
-    <br><br><br><br><br><br><br>
 
+    <br><br><br><br><br><br>
 
-    <div class="titles" style="text-align: center;">
+<div class="titles" style="text-align: center;">
         <h2>ASCENSION BAPTIST CHURCH, APPIADU BRANCH</h2>
         <h2>MEMBERSHIP REGISTRATION FORM</h2>
     </div>
-
-    {{!-- <marquee behavior="" direction="" class="marq"> <span style="color: burlywood;">Ephesians 1:3-6</span> Blessed
-        be the God and Father of our Lord Jesus Christ, who has blessed us with every spiritual blessing in the heavenly
-        places in Christ,
-        just as He chose us in Him before the foundation of the world, that we should be holy and without blame before
-        Him in love, having predestined us to adoption as sons by Jesus Christ to Himself, according to the good
-        pleasure of His will,
-        to the praise of the glory of His grace, by which He made us accepted in the Beloved. <span
-            style="color: burlywood;">Ephesians 1:3-6</span></marquee> --}}
-    <hr style="color: antiquewhite; background-color:aliceblue">
+    <br>
 
 
     <div class="row">
         <div class="col-md-10 offset-md-1" style="background-color: #cbc6c6;margin-top: 20px;padding:20px; ">
 
             <body style="color: black;">
-                <h3 style="text-align: center;"><a class="btn btn-success" href="/employee"><i class="fa fa-plus"></i>
-                        Create New</a>&nbsp;&nbsp; Adult Membership List</h3>
+                <h3 style="text-align: center;"><a class="btn btn-success" href="/teens"><i class="fa fa-plus"></i>
+                        Create New</a>&nbsp;&nbsp; Teens and Children Membership List</h3>
                 <div class="outer-wrapper">
                     <div class="table-wrapper">
                         <table
@@ -132,35 +120,42 @@
                             <thead>
                                 <tr>
                                     <th>Surname</th>
-                                    <th>First Name</th>
-                                    <th>Popular Name</th>
-                                    <th>Gender</th>
+                                    <th>Other Name(s)</th>
                                     <th>DOB</th>
-                                    <th>Day Born</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
                                     <th>Home Town</th>
                                     <th>Region</th>
                                     <th>Residence</th>
                                     <th>House No.</th>
-                                    <th>Occupation</th>
+                                    <th>Occupation/School</th>
                                     <th>Sunday School Class</th>
-                                    <th>Contact</th>
+                                    <th>Mobile</th>
                                     <th>Email</th>
                                     {{!-- <th>Mobile</th>
                                     <th>City</th> --}}
-                                    <th>Tithe Card?</th>
-                                    <th>Tithe Card NO.</th>
-                                    <th>Spouse Member ?</th>
-                                    <th>SpouseID</th>
-                                    <th>Spouse Name</th>
-                                    <th>Spouse Occupation</th>
-                                    <th>Spouse Contact</th>
-                                    <th>Baptised By</th>
+                                    <th>Father's Name</th>
                                     <th>Church</th>
-                                    <th>Location</th>
-                                    <th>Cert. NO.</th>
+                                    <th>Occupation</th>
+                                    <th>Phone No</th>
+                                    <th>Mother's Name</th>
+                                    <th>Church</th>
+                                    <th>Occupation</th>
+                                    <th>Phone No.</th>
+                                    <th>Church</th>
+                                    <th>Baptised?</th>
+                                    <th>By</th>
+                                    <th>Church</th>
+                                    <th>Bapt. Cert. No.</th>
                                     <th>Date Baptised</th>
                                     <th>Membership Year</th>
-                                    <th>Edit</th>
+                                    <th>Position in Department</th>
+                                    <th>Name of Department(Prev)</th>
+                                    <th>Year Elected(Prev)</th>
+                                    <th>Position(Prev)</th>
+                                    <th>Name of Department(Cur)</th>
+                                    <th>Year Elected(Cur)</th>
+                                    <th>Position(Cur)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -214,25 +209,25 @@
     </div>
 
 
+
+
+
+     <footer class="footer fixed-bottom text-center"
+        style="background-color:rgb(11, 47, 57); color:rgba(240, 239, 236, 0.963);">
+        © 2022 Gideons, Inc <br>
+        gideon.boateng@amalitech.org [0555285176] <br>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
-{{!-- <footer class="sticky-footer">
-    <hr style="color: antiquewhite; background-color:aliceblue">
-    <marquee behavior="" direction="" class="marq"> <span style="color: burlywood;">Ephesians 1:3-6</span> Blessed be
-        the God and Father of our Lord Jesus Christ, who has blessed us with every spiritual blessing in the heavenly
-        places in Christ,
-        just as He chose us in Him before the foundation of the world, that we should be holy and without blame before
-        Him in love, having predestined us to adoption as sons by Jesus Christ to Himself, according to the good
-        pleasure of His will,
-        to the praise of the glory of His grace, by which He made us accepted in the Beloved. <span
-            style="color: burlywood;">Ephesians 1:3-6</span></marquee>
-    <hr style="color: antiquewhite; background-color:aliceblue">
-</footer> --}}
-<br>
-<footer class="footer fixed-bottom text-center"
-    style="background-color:rgb(11, 47, 57); color:rgba(240, 239, 236, 0.963);">
-    © 2022 Gideons, Inc <br>
-    gideon.boateng@amalitech.org [0555285176] <br>
-
-</footer>
-
 </html>

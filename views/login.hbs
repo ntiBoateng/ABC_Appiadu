@@ -52,10 +52,29 @@
             <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
               <li ><a href="/"><span>Home</span></a></li>
 
-              <li class="active"><a href="/employee"><span>Create New</span></a></li>
-              <li><a href="/employee/list"><span>Membership List</span></a></li>
+              <li class="has-children">
+                  <a href="#"><span>Create New</span></a>
+                  <ul class="dropdown arrow-top role="button" data-bs-toggle="dropdown" aria-expanded="false"">
+                    <li class="dropdown-item"><a href="/employee">Adult</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li class="dropdown-item"><a href="/teens">Teens and Children</a></li>
+                  </ul>
+                </li>
+              <li class="has-children">
+                            <a href="#"><span>Membership List</span></a>
+                            <ul class="dropdown arrow-top role=" button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <li class=" dropdown-item"><a href="/employee/list">Adult</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="dropdown-item"><a href="/teens/list">Teens and Children</a></li>
+                            </ul>
+                        </li>
 
               <li><a href="/contact"><span>Contact</span></a></li>
+              <li class="active"><a href="/history"><span>Church History</span></a></li>
             </ul>
           </nav>
         </div>
