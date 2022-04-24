@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ascension Baptist Church</title>
+     <link rel="shortcut icon" href="https://scontent.facc6-1.fna.fbcdn.net/v/t31.18172-8/13730886_1771248073152551_9134288431789426564_o.png?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=tncOcUngCUoAX_JQQdG&_nc_ht=scontent.facc6-1.fna&oh=00_AT_E1uvpWmAkUky16IWz_68mdH-rqxwQ3D2VSbCyaw-fIA&oe=628ADAB0" type="image/x-icon">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -156,6 +157,7 @@
                                     <th>Name of Department(Cur)</th>
                                     <th>Year Elected(Cur)</th>
                                     <th>Position(Cur)</th>
+                                    <th>Edit</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -190,11 +192,12 @@
                                     <td>{{this.certNo}}</td>
                                     <td>{{this.dateBapt}}</td>
                                     <td>{{this.memberYear}}</td>
-
+                                        
                                     <td>
                                         <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg"
                                                 aria-hidden="true"></i></a>
-                                        <a href="/delete/{{this._id}}"
+
+                                        <a href="/delete/teens/{{this._id}}"
                                             onclick="return confirm('Are you sure to delete this record ?');"><i
                                                 class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
                                     </td>
@@ -213,7 +216,7 @@
 
 
      <footer class="footer fixed-bottom text-center"
-        style="background-color:rgb(11, 47, 57); color:rgba(240, 239, 236, 0.963);">
+        style="background-color:rgb(11, 47, 57); color:rgba(240, 239, 236, 0.963); font-size: small;">
         © 2022 Gideons, Inc <br>
         gideon.boateng@amalitech.org [0555285176] <br>
 

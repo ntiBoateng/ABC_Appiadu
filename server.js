@@ -16,10 +16,14 @@ const path = require("path")
 const bodyparser = require('body-parser');
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 const app = express();
+const Teen = mongoose.model('Teen');
+
 
 const PORT = process.env.PORT || 5000;
 
 const employeeController = require('./controllers/employeeController');
+const teensController = require('./controllers/teenController');
+
 app.use(bodyparser.urlencoded({
   extended: true
 }));
@@ -77,6 +81,8 @@ app.use(methodOverride("_method"));
 app.use(express.static("public"));
 
 app.use('/employee',checkAuthenticated, employeeController);
+app.use('/teen',teensController);
+
 
 app.get("/", (req, res) => {
   res.render("index");  
@@ -85,7 +91,19 @@ app.get("/history",(req,res)=>{
   res.render("history")
 })
 app.get("/teens",(req,res)=>{
-  res.render("employee/teens")
+  //res.render("employee/teens")
+
+  Teen.find((err, docs) => {
+    if (!err) {
+        res.render("employee/teens", {
+            list: docs
+        });
+    }
+    else {
+        console.log('Error in retrieving employee list :' + err);
+    }
+});
+
 })
 app.get("/teens/list",(req,res)=>{
   res.render("employee/teenslist")

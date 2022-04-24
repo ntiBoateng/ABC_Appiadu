@@ -41,6 +41,7 @@ function insertRecord(req, res) {
     employee.spouseID = req.body.spouseID
     employee.spouseName = req.body.spouseName
     employee.spouseCont = req.body.spouseCont
+    employee.baptised = req.body.baptised
     employee.baptBy = req.body.baptBy
     employee.dayBorn = req.body.dayBorn
     employee.church = req.body.church
@@ -51,6 +52,16 @@ function insertRecord(req, res) {
     employee.spouseMember =req.body.spouseMember
     employee.spouseOccupation = req.body.spouseOccupation
     employee.region = req.body.region
+
+    employee.mariStat = req.body.mariStat
+    employee.auxiliary = req.body.auxiliary
+    employee.curchPo = req.body.curchPo
+    employee.departmentNamePrev = req.body.departmentNamePrev
+    employee.yearElectPrev = req.body.yearElectPrev
+    employee.positionPrev = req.body.positionPrev
+    employee.departmentNameCur = req.body.departmentNameCur
+    employee.yearElectCur = req.body.yearElectCur
+    employee.positionCur = req.body.positionCur
 
     employee.save((err, doc) => {
         if (!err)

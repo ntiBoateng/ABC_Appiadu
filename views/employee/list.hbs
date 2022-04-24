@@ -4,6 +4,7 @@
 
 <head>
     <title>Ascension Baptist Church</title>
+     <link rel="shortcut icon" href="https://scontent.facc6-1.fna.fbcdn.net/v/t31.18172-8/13730886_1771248073152551_9134288431789426564_o.png?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=tncOcUngCUoAX_JQQdG&_nc_ht=scontent.facc6-1.fna&oh=00_AT_E1uvpWmAkUky16IWz_68mdH-rqxwQ3D2VSbCyaw-fIA&oe=628ADAB0" type="image/x-icon">
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -132,8 +133,8 @@
                             <thead>
                                 <tr>
                                     <th>Surname</th>
-                                    <th>First Name</th>
-                                    <th>Popular Name</th>
+                                    <th>Other Name(s)</th>
+                                    {{!-- <th>Popular Name</th> --}}
                                     <th>Gender</th>
                                     <th>DOB</th>
                                     <th>Day Born</th>
@@ -154,12 +155,20 @@
                                     <th>Spouse Name</th>
                                     <th>Spouse Occupation</th>
                                     <th>Spouse Contact</th>
+                                    <th>Baptised ?</th>
                                     <th>Baptised By</th>
                                     <th>Church</th>
                                     <th>Location</th>
                                     <th>Cert. NO.</th>
                                     <th>Date Baptised</th>
                                     <th>Membership Year</th>
+                                    <th>Position in Department</th>
+                                    <th>Name of Department(Prev)</th>
+                                    <th>Year Elected(Prev)</th>
+                                    <th>Position(Prev)</th>
+                                    <th>Name of Department(Cur)</th>
+                                    <th>Year Elected(Cur)</th>
+                                    <th>Position(Cur)</th>
                                     <th>Edit</th>
                                 </tr>
                             </thead>
@@ -168,7 +177,7 @@
                                 <tr>
                                     <td>{{this.surname}}</td>
                                     <td>{{this.fullName}}</td>
-                                    <td>{{this.popularName}}</td>
+                                    {{!-- <td>{{this.popularName}}</td> --}}
                                     <td>{{this.gender}}</td>
                                     <td>{{this.dob}}</td>
                                     <td>{{this.dayBorn}}</td>
@@ -189,12 +198,25 @@
                                     <td>{{this.spouseName}}</td>
                                     <td>{{this.spouseOccupation}}</td>
                                     <td>{{this.spouseCont}}</td>
+                                    <td>{{this.baptised}}</td>
                                     <td>{{this.baptBy}}</td>
                                     <td>{{this.church}}</td>
                                     <td>{{this.location}}</td>
                                     <td>{{this.certNo}}</td>
                                     <td>{{this.dateBapt}}</td>
                                     <td>{{this.memberYear}}</td>
+
+                                    <td>{{this.mariStat}}</td>
+                                    <td>{{this.auxiliary}}</td>
+                                    <td>{{this.curchPo}}</td>
+                                    <td>{{this.departmentNamePrev}}</td>
+                                    <td>{{this.yearElectPrev}}</td>
+                                    <td>{{this.positionPrev}}</td>
+                                    <td>{{this.departmentNameCur}}</td>
+                                    <td>{{this.yearElectCur}}</td>
+                                    <td>{{this.positionCur}}</td>
+                                    
+
 
                                     <td>
                                         <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg"
@@ -214,6 +236,7 @@
     </div>
 
 
+
 </body>
 {{!-- <footer class="sticky-footer">
     <hr style="color: antiquewhite; background-color:aliceblue">
@@ -229,7 +252,7 @@
 </footer> --}}
 <br>
 <footer class="footer fixed-bottom text-center"
-    style="background-color:rgb(11, 47, 57); color:rgba(240, 239, 236, 0.963);">
+    style="background-color:rgb(11, 47, 57); color:rgba(240, 239, 236, 0.963); font-size: small;">
     © 2022 Gideons, Inc <br>
     gideon.boateng@amalitech.org [0555285176] <br>
 

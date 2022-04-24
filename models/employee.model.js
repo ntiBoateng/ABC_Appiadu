@@ -9,9 +9,7 @@ var employeeSchema = new mongoose.Schema({
         type: String,
         
     },
-    popularName:{
-        type: String
-    },
+    
     gender:{
         type : String
     },
@@ -66,6 +64,9 @@ var employeeSchema = new mongoose.Schema({
         type: String,
         default : "NA"
     },
+    baptised:{
+        type: String
+    },
     baptBy:{
         type: String,
         default:"NA"
@@ -97,7 +98,51 @@ var employeeSchema = new mongoose.Schema({
     },
     region:{
         type: String
-    }
+    },
+    formNum:{
+        type: String
+    },
+    idNum:{
+        type: String
+    },
+
+    mariStat:{
+        type: String
+    },
+    
+    auxiliary:{
+        type: String
+    },
+    
+    curchPo:{
+        type: String
+    },
+    
+    departmentNamePrev:{
+        type: String
+    },
+    
+    yearElectPrev:{
+        type: String
+    },
+    
+    positionPrev:{
+        type: String
+    },
+    
+    departmentNameCur:{
+        type: String
+    },
+    
+    yearElectCur:{
+        type: String
+    },
+    
+    positionCur:{
+        type: String
+    },
+    
+
 });
 
 // Custom validation for email

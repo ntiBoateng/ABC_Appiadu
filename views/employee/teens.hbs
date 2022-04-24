@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Ascension Baptist Church-Teens</title>
+     <link rel="shortcut icon" href="https://scontent.facc6-1.fna.fbcdn.net/v/t31.18172-8/13730886_1771248073152551_9134288431789426564_o.png?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=tncOcUngCUoAX_JQQdG&_nc_ht=scontent.facc6-1.fna&oh=00_AT_E1uvpWmAkUky16IWz_68mdH-rqxwQ3D2VSbCyaw-fIA&oe=628ADAB0" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -112,10 +113,10 @@
     {{!-- main body --}}
     <div class="container"
         style="background-color: #ddd3d3;margin-top: 25px;padding:20px; text-align:center; font-family:Verdana, Geneva, Tahoma, sans-serif">
-        <form action="" method="post" autocomplete="off" aria-autocomplete="none" style="color: black;"></form>
+        <form action="/teens" method="post" autocomplete="off" aria-autocomplete="none" style="color: black;"></form>
         <div class="row">
             <div class="col-md-10 offset-md-1">
-
+ <input type="hidden" name="_id" value="{{teen._id}}">
 
                 <h3>TEENS AND CHILDREN REGISTRATION FORM</h3>
             </div>
@@ -126,14 +127,14 @@
         <div class="row">
             <div class="col-md-4">
                 <label for="idNum">ID Number</label>
-                <input type="text" id="idNum" class="form-control">
+                <input type="text" value="{{teen.idNum}}" id="idNum" class="form-control">
             </div>
             <div class="col-md-4">
                 <span></span>
             </div>
             <div class="col-md-4">
                 <label for="formNo">Form No.</label>
-                <input type="text" id="formNo" class="form-control">
+                <input type="text" value="{{teen.formNo}}" id="formNo" class="form-control">
             </div>
         </div>
 
@@ -142,25 +143,25 @@
         <div class="row">
             <div class="col-md-4">
                 <label for="surname">Surname</label>
-                <input type="text" id="surname" class="form-control">
+                <input type="text" id="surname" value="{{teen.surname}}" class="form-control">
             </div>
             <div class="col-md-4">
                 <label for="otherName">Other Name(s)</label>
-                <input type="text" id="otherName" class="form-control">
+                <input type="text" id="otherName" value="{{teen.otherName}}" class="form-control">
             </div>
         </div>
 
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-4">
                 <label for="date">DOB</label>
-                <input type="date" name="date" id="date" class="form-control">
+                <input type="date" name="date" value="{{teen.dob}}" id="date" class="form-control">
             </div>
         </div>
 
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-2">
                 <label for="age">Age</label>
-                <input type="text" class="form-control">
+                <input type="text" value="{{teen.age}}" class="form-control">
             </div>
             <div class="col-md-4">
                 <label><i class="fa fa-user-circle-o" aria-hidden="true"></i> Gender</label><br>
@@ -171,7 +172,7 @@
             </div>
             <div class="col-md-3">
                 <label for="hometown">Home Town</label>
-                <input type="text" class="form-control" id="hometown">
+                <input type="text" class="form-control" value="{{teen.hometown}}" id="hometown">
             </div>
             <div class="col-md-3">
                 <label for="region">Region</label><br>
@@ -199,102 +200,102 @@
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-4">
                 <label for="residence">Residence</label>
-                <input type="text" class="form-control" id="residence">
+                <input type="text" class="form-control" value="{{teen.residence}}" id="residence">
             </div>
             <div class="col-md-4">
                 <label for="houseNo">House No.</label>
-                <input type="text" class="form-control" id="houseNo">
+                <input type="text" value="{{teen.houseNo}}" class="form-control" id="houseNo">
             </div>
             <div class="col-md-4">
                 <label for="school">Occupation/School</label>
-                <input type="text" class="form-control" id="school">
+                <input type="text" value="{{teen.school}}" class="form-control" id="school">
             </div>
         </div>
         <div class="row " style="margin-top: 20px;">
             <div class="col-md-4">
                 <label for="schoolClass">Sunday School Class</label>
-                <input type="text" class="form-control" id="schoolClass">
+                <input type="text" value="{{teen.sundaySchool}}" class="form-control" id="schoolClass">
             </div>
             <div class="col-md-4">
                 <label for="mobile">Mobile</label>
-                <input type="text" class="form-control" id="mobile">
+                <input type="text" value="{{teen.mobile}}" class="form-control" id="mobile">
             </div>
             <div class="col-md-4">
                 <label for="email">Email</label>
-                <input type="text" class="form-control" id="email">
+                <input type="text" value="{{teen.email}}" class="form-control" id="email">
             </div>
         </div>
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-3">
                 <label for="father">Father's Name</label>
-                <input type="text" class="form-control" id="father">
+                <input type="text" value="{{teen.fatherName}}" class="form-control" id="father">
             </div>
             <div class="col-md-3">
                 <label for="fatherChurch">Church</label>
-                <input type="text" class="form-control" id="fatherChurch">
+                <input type="text" value="{{teen.fatherChurch}}" class="form-control" id="fatherChurch">
             </div>
             <div class="col-md-3">
                 <label for="occupation">Occupation</label>
-                <input type="text" class="form-control" id="occupation">
+                <input type="text" value="{{teen.fatherOccupation}}" class="form-control" id="occupation">
             </div>
             <div class="col-md-3">
                 <label for="fatherNo">Phone No.</label>
-                <input type="text" class="form-control" id="fatherNo">
+                <input type="text" value="{{teen.fatherNo}}" class="form-control" id="fatherNo">
             </div>
         </div>
 
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-3">
                 <label for="mother">Mother's Name</label>
-                <input type="text" class="form-control" id="mother">
+                <input type="text" value="{{teen.motherName}}" class="form-control" id="mother">
             </div>
             <div class="col-md-3">
                 <label for="motherChurch">Church</label>
-                <input type="text" class="form-control" id="motherChurch">
+                <input type="text" value="{{teen.mother}}" class="form-control" id="motherChurch">
             </div>
             <div class="col-md-3">
                 <label for="occupation">Occupation</label>
-                <input type="text" class="form-control" id="occupation">
+                <input type="text" value="{{teen.motherOccupation}}" class="form-control" id="occupation">
             </div>
             <div class="col-md-3">
                 <label for="motherNo">Phone No.</label>
-                <input type="text" class="form-control" id="motherNo">
+                <input type="text" value="{{teen.motherNo}}" class="form-control" id="motherNo">
             </div>
         </div>
 
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-3">
                 <label><i class="fa fa-user-circle-o" aria-hidden="true"></i> Baptised?</label><br>
-                <label for="genderM"> Yes</label>
-                <input type="radio" name="gender" id="genderM" value="Yes"> &nbsp;
-                <label for="genderF">No</label>
-                <input type="radio" name="gender" id="genderF" value="No">
+                <label for="bapYes"> Yes</label>
+                <input type="radio" name="bap" id="bapYes" value="Yes"> &nbsp;
+                <label for="bapNo">No</label>
+                <input type="radio" name="bap" id="bapNo" value="No">
             </div>
             <div class="col-md-3">
                 <label for="by">By</label>
-                <input type="text" class="form-control" id="by">
+                <input type="text" value="{{teen.baptisedBy}}" class="form-control" id="by">
             </div>
             <div class="col-md-3">
                 <label for="church">Church</label>
-                <input type="text" class="form-control" id="church">
+                <input type="text" value="{{teen.churchBap}}" class="form-control" id="church">
             </div>
             <div class="col-md-3">
                 <label for="certNo">Bapt. Cert. No.</label>
-                <input type="text" class="form-control" id="certNo">
+                <input type="text" value="{{teen.certNo}}" class="form-control" id="certNo">
             </div>
         </div>
 
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-4">
                 <label for="dateBapt">Date Baptised</label>
-                <input type="date" name="dateBapt" id="dateBapt" class="form-control">
+                <input type="date" value="{{teen.baptisedDate}}" name="dateBapt" id="dateBapt" class="form-control">
             </div>
             <div class="col-md-4">
                 <span></span>
             </div>
             <div class="col-md-2">
                 <label for="memberYear">Membership Year</label>
-                <input type="text" name="dateBapt" id="memberYear" class="form-control">
+                <input type="text" value="{{teen.memberYear}}" name="dateBapt" id="memberYear" class="form-control">
             </div>
         </div>
         <br>
@@ -327,21 +328,21 @@
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-4">
                 <label for="depatName">Name of Department/Committee</label>
-                <input type="text" id="depatName" class="form-control">
+                <input type="text" value="{{teen.departmentNamePrev}}" id="depatName" class="form-control">
             </div>
             <div class="col-md-1">
                 <span></span>
             </div>
             <div class="col-md-2">
                 <label for="yearElect">Year Elected</label>
-                <input type="text" id="yearElect" class="form-control">
+                <input type="text" value="{{teen.yearElectPrev}}" id="yearElect" class="form-control">
             </div>
             <div class="col-md-1">
                 <span></span>
             </div>
             <div class="col-md-4">
                 <label for="position">Position</label>
-                <input type="text" class="form-control" id="position">
+                <input type="text" value="{{teen.positionPrev}}" class="form-control" id="position">
             </div>
         </div>
 
@@ -350,21 +351,21 @@
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-4">
                 <label for="depatName">Name of Department/Committee</label>
-                <input type="text" id="depatName" class="form-control">
+                <input type="text" value="{{teen.departmentNameCur}}" id="depatName" class="form-control">
             </div>
             <div class="col-md-1">
                 <span></span>
             </div>
             <div class="col-md-2">
                 <label for="yearElect">Year Elected</label>
-                <input type="text" id="yearElect" class="form-control">
+                <input type="text" value="{{teen.yearElectCur}}" id="yearElect" class="form-control">
             </div>
             <div class="col-md-1">
                 <span></span>
             </div>
             <div class="col-md-4">
                 <label for="position">Position</label>
-                <input type="text" class="form-control" id="position">
+                <input type="text" value="{{teen.positionCur}}" class="form-control" id="position">
             </div>
         </div>
         <div class="row" style="margin-top: 20px;">
@@ -387,7 +388,7 @@
 
 
     <footer class="footer fixed-bottom text-center"
-        style="background-color:rgb(11, 47, 57); color:rgba(240, 239, 236, 0.963);">
+        style="background-color:rgb(11, 47, 57); color:rgba(240, 239, 236, 0.963); font-size: small;">
         © 2022 Gideons, Inc <br>
         gideon.boateng@amalitech.org [0555285176] <br>
 
