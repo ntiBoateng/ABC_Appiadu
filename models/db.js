@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb+srv://bgnti:Aladdin200@cluster0.vrp2h.mongodb.net/EmployeeDB', {useUnifiedTopology: true, useNewUrlParser: true,useFindAndModify:false }, (err) => {
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.vrp2h.mongodb.net/EmployeeDB`, {useUnifiedTopology: true, useNewUrlParser: true,useFindAndModify:false }, (err) => {
     if (!err) { console.log('MongoDB Connection Succeeded.') }
     else { console.log('Error in DB connection : ' + err) }
 });

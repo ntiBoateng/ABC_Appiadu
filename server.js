@@ -171,7 +171,7 @@ app.get("*",(req,res)=>{
 
 
 mongoose
-  .connect("mongodb+srv://bgnti:Aladdin200@cluster0.vrp2h.mongodb.net/EmployeeDB", {
+  .connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.vrp2h.mongodb.net/EmployeeDB`, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
